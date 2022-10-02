@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/11.2.1/math.js"
+        integrity="sha512-47N5yVdAeXJ+9qstVMTH2Z0EpX618sjYZcswRwhpldSTD0IbW6yQPtzg4RLrPp/2+TIgEF1elT68/ZBu82nqJA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+
+<body>
+    <h1>ES6 Functions</h1>
+
+    <!-- <label>Average</label>
+    <form onsubmit="logTwo(); return false">
+        <input type="number" id="input">
+        <button type="submit">Do log</button>
+    </form>
+    <div id ="result"></div>
+   <script>
+    let logTwo =() =>{
+        let input = +document.querySelector("#input").value
+        let result = math.log(input,2);
+        document.querySelector("#result").innerHTML = result;
+    }
+   </script> -->
+
+
+<form id="med" onsubmit="median(); return false">
+<input type="number" id="inputNum">
+<button type="submit">Median</button>
+</form>
+<div id="result"></div>
+
+   <script>
+    let medianInputArray = [];
+    let median = ()=> {
+        let input =  +document.querySelector("#inputNum").value;
+        medianInputArray.push(input);
+
+        let result = math.median(medianInputArray);
+
+        document.querySelector("#result").innerHTML = "Median value " + medianInputArray;
+        document.querySelector("#result").innerHTML += "<br/>" ;
+        document.querySelector("#result").innerHTML += "Result " + result;
+
+        document.querySelector("#med").reset();
+
+    }
+   </script>
+</body>
+
+</html
